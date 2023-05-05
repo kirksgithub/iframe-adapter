@@ -23,7 +23,7 @@ or\
    ...
    // then add the following conditional (or similar) where your supported wallets are loaded
 
-   let wallets = detectEmbeddedInSquadsIframe() ? [new SquadsEmbeddedWalletAdapter("https://iframe-preview.squads.so")] : [ new PhantomWalletAdapter(), new ExodusWalletAdapter()];
+   const wallets = detectEmbeddedInSquadsIframe() ? [new SquadsEmbeddedWalletAdapter("https://iframe-preview.squads.so")] : [ new PhantomWalletAdapter(), new ExodusWalletAdapter()];
    // the rest of your code
    return (
     <WalletProvider wallets={wallets} autoConnect>
